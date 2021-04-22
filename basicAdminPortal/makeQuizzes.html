@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Panel</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+
+<h1>Add Quiz</h1>
+    <div>
+        <!-- form to collect quiz name,key and marks -->
+       <form id="mainForm" action="">
+           <label>Quiz name&nbsp&nbsp</label><input class="Input" type="text" name="QName" id="QName"><br><br>
+           <label>Quiz key&nbsp&nbsp&nbsp&nbsp&nbsp</label><input class="Input" type="text" name="QKey" id="QKey"><br><br>
+           <label>Total marks&nbsp</label><input  class="Input" type="text" name="QMarks" id="QMarks">
+       </form><br><br>
+
+       <!-- main form submission button -->
+       <button onclick="freez()" id="addButton" class="collapsible" type="button">Submit and add questions</button>
+
+
+       <div  class="content" style="display: none; margin-top: 20px;" id="quest">
+        <p id="Message" style="visibility: hidden; font-size: x-large;"></p>
+
+        <!-- question taking form -->
+        <!-- <form onclick="addQuestion()" id="QForm" action="" method="POST">-->
+         <form  id="QForm" action="" method="POST">
+            <label>Question</label><br><textarea cols="50" rows="10"></textarea><br>
+             <label>A</label>&nbsp<input type="text" name="OA" id="OA">&nbsp&nbsp&nbsp
+             <label>B</label>&nbsp<input type="text" name="OA" id="OA">&nbsp&nbsp&nbsp
+             <label>C</label>&nbsp<input type="text" name="OA" id="OA">&nbsp&nbsp&nbsp
+             <label>D</label>&nbsp<input type="text" name="OA" id="OA">&nbsp&nbsp&nbsp<br><br>
+             <label>Answer</label><input type="text" name="OA" id="OA"><br><br>
+         </form>
+             
+         <button style="width: 10%;font-size: medium; background-color: rgb(10, 170, 10); color: white; border-radius: 5px;">Add</button>
+       </div>
+    </div>
+    
+    <script>
+        //for collapsable form
+        var coll = document.getElementById("addButton");
+        var i;
+
+        coll.addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+            content.style.display = "none";
+            } else {
+            content.style.display = "block";
+            }
+        });
+          
+        // submits the main (upper) form
+        function freez() {
+                document.getElementById("addButton").style.visibility="hidden"
+                document.getElementById("Message").innerHTML=("Add questions in quiz:"+ document.getElementById("QName").value);
+                document.getElementById("Message").style.visibility="visible"
+                var aboveForm=document.getElementById("mainForm");
+                aboveForm.style.display="none"
+               
+               //makes upper form element read only(currently made invisible after submiting)
+                var coll=document.getElementsByClassName('Input');
+                var i;
+
+                for (i = 0; i < coll.length; i++) {
+                    coll[i].setAttribute("readonly",true);
+                }
+        }
+
+        // submits question
+        function addQuestion(){
+            document.getElementById("QForm").submit();
+        }
+    </script>
+</body>
+</html>
