@@ -4,7 +4,7 @@
 <html>
 <head>
         <img id="logo">
-        <title>Untitled Document</title>
+        <title>Login</title>
 		<meta http-equiv="Content-Type" content="text/html; charsequence=8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link href="/style/signup.css" rel="stylesheet" type="text/css"/>
@@ -13,10 +13,10 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
-    <div class="signin">
+    <div class="signup">
         <form id="form_id" action="loginNow" method="post">
         <div class="form-group">
-            <h2 style="color: white">Login</h2>
+            <h2 style="color: black">Login</h2><br>
             <input type="E-mail" name="UEmail" placeholder="Email" id="UEmail"><br><br>
             <input type="password" name="Password" placeholder="Password" id="Password"><br><br>
             <p id="pa1">enter all fields</p>
