@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charsequence=8" />
 <meta charset="utf-8">
  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Untitled Document</title>
+<title>register</title>
 <link href="/style/signup.css" rel="stylesheet" type="text/css"/>
 <link href="https://fonts.googleapis.com/css?family-Play" rel="stylesheet">
 <script type="text/javascript" src="/scripts/regValid.js"></script>
@@ -18,7 +18,7 @@
     <div class="signup">
         <form id="form_id" action="userDetail" method="post">
         <div class="form-group">
-            <h2 style="color: #fff;">Register</h2>
+            <h2 style="color: black;">Register</h2><br>
             <input type="text" name="UName" placeholder="first name" id="UName"><br><br>
             <input type="text" name="EmailId" placeholder="Email address" id="EmailId"><br><br>
             <input type="text" name="Phone" placeholder="Phone No." id="Phone"><br><br>
@@ -27,7 +27,7 @@
             <p id="pa1">enter all fields</p>
             <button type="button" onclick="myFunction()">Sign up</button><br>
             
-            Already have an account<a href="login" style="text-decoration: none; font-family: 'Play', sans-serif; color:yellow;">&nbsp;Log In</a>
+            Already have an account<a href="login" style="text-decoration: none; font-family: 'Play', sans-serif; color:#2ecc71;">&nbsp;Log In</a>
        </div>
         </form>
     </div>
